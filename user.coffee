@@ -13,16 +13,27 @@ secret = null
 promptGames =
   type: 'checkbox'
   name: 'games'
-  message: 'Select the games to boost:'
+  message: 'INDÍTSD A BOOSTOT:'
   choices: [
-    {value: 10, name: 'CS 1.6', checked: true}
-    {value: 730, name: 'CS:GO', checked: true}
-    {value: 570, name: 'DOTA2'}
+  {value: '271590', name: 'GTA V', value: '271590', checked: true}
+  {value: '730', name: 'CS GO', value: '730', checked: true}
+  {value: 10, name: 'CS 1.6', checked: true}
+  {value: '359550', name: 'R6S', value: '359550', checked: true}
+  {value: '252490', {name: 'RUST', checked: true}
+  {name: 'Rocket League', value: '252950', checked: true}
+  {value: '242760', name: 'Forest', checked: true}
+  {value: '346110', name: 'ARK: Survival Evolved', checked: true}
+  {value: '444090', name: 'Paladins', checked: true}
+  {value: '282660', name: 'EAC', value: '282660', checked: true}
+  {value: '381210', name: 'Dead BY Daylight', checked: true}
+  {value: '433850', name: 'H1Z1', checked: true}
+  {value: '218620', name: 'PayDay2', checked: true}
+  {value: '307780', name: 'MK:X', checked: true}
   ]
 
 inquirer.prompt [
-  {name: 'username', message: 'Username:'}
-  {name: 'password', message: 'Password:', type: 'password'}
+  {name: 'username', message: 'Felhasználónév:'}
+  {name: 'password', message: 'Jelszó:', type: 'password'}
 ]
 .then ({username, password}) ->
   database[username] = {}

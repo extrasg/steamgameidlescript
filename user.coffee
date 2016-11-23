@@ -15,7 +15,6 @@ promptGames =
   name: 'games'
   message: 'Select the games to boost:'
   choices: [
-        {value: 271590, name: 'GTAV', checked: true}
 	{value: 730, name: 'CSGO', checked: true}
 	{value: 10, name: 'CS 1.6', checked: true}
 	{value: 359550, name: 'R6S', checked: true}
@@ -29,7 +28,7 @@ promptGames =
 	{value: 433850, name: 'H1Z1', checked: true}
 	{value: 218620, name: 'PayDay2', checked: true}
 	{value: 307780, name: 'MK:X', checked: true}
-        {value: 570, name: 'DOTA2'}
+	{value: 570, name: 'DOTA2'}
   ]
 
 inquirer.prompt [

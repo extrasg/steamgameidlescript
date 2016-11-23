@@ -13,7 +13,7 @@ secret = null
 promptGames =
   type: 'checkbox'
   name: 'games'
-  message: 'Válaszd ki a játékokat a boosthoz.:'
+  message: 'Select the games to boost:'
   choices: [
   {value: 271590, name: 'GTA V', checked: true}
   {value: 730, name: 'CS:GO', checked: true}
@@ -28,12 +28,12 @@ promptGames =
   {value: 381210, name: 'Dead BY Daylight', checked: true}
   {value: 433850, name: 'H1Z1', checked: true}
   {value: 218620, name: 'PayDay2', checked: true}
-  {value: 307780, name: 'MK:X', checked: true}
+  {value: 307780, name: 'MK:X'}
   ]
 
 inquirer.prompt [
-  {name: 'username', message: 'Felhasználónév:'}
-  {name: 'password', message: 'Jelszó:', type: 'password'}
+  {name: 'username', message: 'Username:'}
+  {name: 'password', message: 'Password:', type: 'password'}
 ]
 .then ({username, password}) ->
   database[username] = {}
@@ -46,7 +46,7 @@ inquirer.prompt [
 
   client.on 'steamGuard', (domain, callback) ->
     if domain
-      inquirer.prompt [name: 'code', message: "Steam guard kód (#{domain}):"]
+      inquirer.prompt [name: 'code', message: "Steam guard code (#{domain}):"]
       .then ({code}) -> callback code
     else
       inquirer.prompt [name: 'secret', message: 'Two-factor shared secret:']

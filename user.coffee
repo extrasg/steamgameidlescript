@@ -13,7 +13,7 @@ secret = null
 promptGames =
   type: 'checkbox'
   name: 'games'
-  message: 'INDÍTSD A BOOSTOT:'
+  message: 'Válaszd ki a játékokat a boosthoz.:'
   choices: [
   {value: 271590, name: 'GTA V', checked: true}
   {value: 730, name: 'CS:GO', checked: true}

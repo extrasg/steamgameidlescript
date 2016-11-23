@@ -32,7 +32,7 @@ promptGames =
   ]
 
 inquirer.prompt [
-  {name: 'username', message: 'UserName:'}
+  {name: 'username', message: 'Username:'}
   {name: 'password', message: 'Password:', type: 'password'}
 ]
 .then ({username, password}) ->
@@ -46,7 +46,7 @@ inquirer.prompt [
 
   client.on 'steamGuard', (domain, callback) ->
     if domain
-      inquirer.prompt [name: 'code', message: "Guard code (#{domain}):"]
+      inquirer.prompt [name: 'code', message: "Steam guard code (#{domain}):"]
       .then ({code}) -> callback code
     else
       inquirer.prompt [name: 'secret', message: 'Two-factor shared secret:']

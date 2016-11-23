@@ -14,7 +14,7 @@ promptGames =
   type: 'checkbox'
   name: 'games'
   message: 'Select the games to boost:'
- _choices: [
+  choices: [
         {value: 271590, name: 'GTAV', checked: true}
 	{value: 730, name: 'CSGO', checked: true}
 	{value: 10, name: 'CS 1.6', checked: true}

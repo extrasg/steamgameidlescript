@@ -33,8 +33,8 @@ promptGames =
   ]
 
 inquirer.prompt [
-  {name: 'username', message: 'FelhasználóNév:'}
-  {name: 'password', message: 'Jelszó:', type: 'password'}
+  {name: 'username', message: 'UserName:'}
+  {name: 'password', message: 'Password:', type: 'password'}
 ]
 .then ({username, password}) ->
   database[username] = {}
@@ -47,7 +47,7 @@ inquirer.prompt [
 
   client.on 'steamGuard', (domain, callback) ->
     if domain
-      inquirer.prompt [name: 'code', message: "Guárd kód (#{domain}):"]
+      inquirer.prompt [name: 'code', message: "Guard code (#{domain}):"]
       .then ({code}) -> callback code
     else
       inquirer.prompt [name: 'secret', message: 'Two-factor shared secret:']

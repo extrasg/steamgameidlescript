@@ -54,7 +54,7 @@ module.exports = class SteamAccount extends EventEmitter
   boost: =>
     @login()
     .then =>
-      @client.setPersona SteamUser.EPersonaState.Offline
+      @client.setPersona SteamUser.EPersonaState.Online
       @client.gamesPlayed @games ? [10, 730]
       console.log "#{@logheader()} Starting to boost games!"
     .catch (err) => console.error "#{@logheader()} #{err}"

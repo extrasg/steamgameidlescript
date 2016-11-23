@@ -15,25 +15,26 @@ promptGames =
   name: 'games'
   message: 'Select the games to boost:'
   choices: [
-  {value: 271590, name: 'GTA V', checked: true}
-  {value: 730, name: 'CS:GO', checked: true}
-  {value: 10, name: 'CS 1.6', checked: true}
-  {value: 359550, name: 'R6S', checked: true}
-  {value: 252490, name: 'RUST', checked: true}
-  {value: 252950, name: 'Rocket League', checked: true}
-  {value: 242760, name: 'Forest', checked: true}
-  {value: 346110, name: 'ARK: Survival Evolved', checked: true}
-  {value: 444090, name: 'Paladins', checked: true}
-  {value: 282660, name: 'EAC', checked: true}
-  {value: 381210, name: 'Dead BY Daylight', checked: true}
-  {value: 433850, name: 'H1Z1', checked: true}
-  {value: 218620, name: 'PayDay2', checked: true}
-  {value: 307780, name: 'MK:X'}
+    {value: 271590, name: 'GTAV', checked: true}
+	{value: 730, name: 'CSGO', checked: true}
+	{value: 10, name: 'CS 1.6', checked: true}
+	{value: 359550, name: 'R6S', checked: true}
+	{value: 252490, name: 'RUST', checked: true}
+	{value: 252950, name: 'ROCKETLEAGUE', checked: true}
+	{value: 242760, name: 'FOREST', checked: true}
+	{value: 346110, name: 'ARK: Survival Evolved', checked: true}
+	{value: 444090, name: 'Paladins', checked: true}
+	{value: 282660, name: 'EAC', checked: true}
+	{value: 381210, name: 'Dead BY Daylight', checked: true}
+	{value: 433850, name: 'H1Z1', checked: true}
+	{value: 218620, name: 'PayDay2', checked: true}
+	{value: 307780, name: 'MK:X', checked: true}
+    {value: 570, name: 'DOTA2'}
   ]
 
 inquirer.prompt [
-  {name: 'username', message: 'Username:'}
-  {name: 'password', message: 'Password:', type: 'password'}
+  {name: 'username', message: 'FelhasználóNév:'}
+  {name: 'password', message: 'Jelszó:', type: 'password'}
 ]
 .then ({username, password}) ->
   database[username] = {}
@@ -46,7 +47,7 @@ inquirer.prompt [
 
   client.on 'steamGuard', (domain, callback) ->
     if domain
-      inquirer.prompt [name: 'code', message: "Steam guard code (#{domain}):"]
+      inquirer.prompt [name: 'code', message: "Guárd kód (#{domain}):"]
       .then ({code}) -> callback code
     else
       inquirer.prompt [name: 'secret', message: 'Two-factor shared secret:']

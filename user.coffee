@@ -15,7 +15,7 @@ promptGames =
   name: 'games'
   message: 'Select the games to boost:'
   choices: [
-	{value: 730, name: 'CSGO', checked: true}
+        {value: 730, name: 'CS:GO', checked: true}
 	{value: 10, name: 'CS 1.6', checked: true}
 	{value: 359550, name: 'R6S', checked: true}
 	{value: 252490, name: 'RUST', checked: true}

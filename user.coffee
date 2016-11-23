@@ -29,7 +29,7 @@ promptGames =
 	{value: 433850, name: 'H1Z1', checked: true}
 	{value: 218620, name: 'PayDay2', checked: true}
 	{value: 307780, name: 'MK:X', checked: true}
-    {value: 570, name: 'DOTA2'}
+        {value: 570, name: 'DOTA2'}
   ]
 
 inquirer.prompt [
